@@ -3,6 +3,9 @@ const app = express();
 
 // Permitir JSON
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Servidor está funcionando 🚀");
+});
 
 // 🔍 TESTE (para ver se o servidor está vivo)
 app.get("/api/status", (req, res) => {
